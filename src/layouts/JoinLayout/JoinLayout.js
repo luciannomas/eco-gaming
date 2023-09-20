@@ -1,5 +1,5 @@
 "use client";
-import { Icon, Image } from "semantic-ui-react";
+import { Icon, Image } from "semantic-ui-react"; 
 import Link from "next/link";
 import styles from "./JoinLayout.module.scss";
 
@@ -11,7 +11,7 @@ export function JoinLayout(props) {
     <div className={styles.container}>
       <div className={styles.topBar}>
         <Link href="/">
-          <Image src="/images/logo.png" alt="Gaming" />
+          <img src="/images/logo.png" alt="Gaming" /> {/* ver deprecacion de Image */}
         </Link>
 
         <Link href="/">

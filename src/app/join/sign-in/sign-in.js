@@ -8,7 +8,7 @@ export default function SignInPage() {
 
 
       <JoinLayout>
-        <div className={styles.signIn}>
+        <div>
           <h3>Iniciar sesión</h3>
 
 
