@@ -10,11 +10,13 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.22.15",
+    "formik": "^2.4.5",
     "next": "13.4.19",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "sass": "^1.67.0",
     "semantic-ui-css": "^2.5.0",
-    "semantic-ui-react": "^2.1.4"
+    "semantic-ui-react": "^2.1.4",
+    "yup": "^1.2.0"
   }
 }
