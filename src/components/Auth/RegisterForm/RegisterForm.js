@@ -9,6 +9,7 @@ import { ENV } from "../../../utils/index";
 
 const register = async (data) => {
     try {
+        console.log("que llega:", data)
       const url = `${ENV.API_URL}/${ENV.ENDPOINTS.AUTH.REGISTER}`;
       const params = {
         method: "POST",
@@ -31,7 +32,7 @@ const register = async (data) => {
 
 export function RegisterForm() {
     const router = useRouter();
-    //const authCtrl = new Auth();
+    
     const formik = useFormik({
         initialValues: initialValues(),
         validationSchema: validationSchema(),

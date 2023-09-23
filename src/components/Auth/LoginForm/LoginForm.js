@@ -3,8 +3,9 @@ import { useFormik } from "formik";
 import { useRouter } from "next/navigation";
 import { initialValues, validationSchema } from "./LoginForm.form";
 import { ENV } from "../../../utils/index";
+import { useAuth } from "@/hooks";
 
-const login = async(data) => {
+const loginCtrol = async(data) => {
   try {
     const url = `${ENV.API_URL}/${ENV.ENDPOINTS.AUTH.LOGIN}`;
     const params = {
@@ -28,6 +29,7 @@ const login = async(data) => {
 
 export function LoginForm() {
   const router = useRouter();
+  const { login } = useAuth();
 
   const formik = useFormik({
     initialValues: initialValues(),
@@ -35,11 +37,10 @@ export function LoginForm() {
     validateOnChange: false,
     onSubmit: async (formValue) => {
       try {
-        const response = await login(formValue);
-        // login(response.jwt);
-        console.log(response)
-
-        router.push("/");
+        const response = await loginCtrol(formValue);
+        login(response.jwt);
+        // console.log(response)
+        // router.push("/");
       } catch (error) {
         console.error(error);
       }

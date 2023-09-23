@@ -6,6 +6,7 @@ export function initialValues() {
     username: "",
     name: "",
     password: "",
+    firstname:"",
   };
 }
 
