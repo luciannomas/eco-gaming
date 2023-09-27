@@ -1,6 +1,5 @@
 import { ENV } from "../../utils/index";
 
-
 const register = async (data) => {
     try {
       const url = `${ENV.API_URL}/${ENV.ENDPOINTS.AUTH.REGISTER}`;
