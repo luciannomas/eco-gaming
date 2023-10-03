@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import { map } from "lodash";
-import { Address as AddressCtrl } from "@/app/api";
 import { useAuth } from "@/hooks";
 import { Address } from "./Address/page";
 import styles from "./ListAddresses.module.scss";
+import { Address as AddressCtrl } from '@/app/api/address';
 
 const addressCtrl = new AddressCtrl();
 

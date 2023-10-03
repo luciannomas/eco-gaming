@@ -2,7 +2,7 @@ import { Form } from "semantic-ui-react";
 import { useFormik } from "formik";
 import { useAuth } from "@/hooks";
 import { initialValues, validationSchema } from "./AddressForm.form";
-import { Address } from '../../../../app/api/address';
+import { Address } from '@/app/api/page';
 
 const addressCtrl = new Address();
 
@@ -16,17 +16,17 @@ export function AddressForm(props) {
     validateOnChange: false,
     onSubmit: async (formValue) => {
       try {
-        if (addressId) {
+         if (addressId) {
           await addressCtrl.update(formValue, addressId);
-        } else {
+         } else {
           await addressCtrl.create(formValue, user.id);
-        }
+         }
 
         formik.handleReset();
         onReload();
         onClose();
       } catch (error) {
-        console.error(error);
+        console.error("error", error);
       }
     },
   });

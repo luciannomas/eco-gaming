@@ -1,4 +1,4 @@
-import { AddAddress } from "./AddAddress/pages";
+import { AddAddress } from "./AddAddress/page";
 import { AddressForm } from "./AddressForm/page";
 import { ListAddresses } from "./ListAddresses/page";
   

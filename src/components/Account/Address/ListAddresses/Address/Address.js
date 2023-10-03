@@ -3,7 +3,9 @@ import { Button, Icon } from "semantic-ui-react";
 import { AddressForm } from "../../AddressForm/page";
 import styles from "./Address.module.scss";
 import { Address as AddressCtrl} from '@/app/api/address';
-import { Confirm, BasicModal } from "@/components/Shared/page";
+import { BasicModal } from '@/components/Shared/BasicModal/page';
+import { Confirm } from '@/components/Shared/page';
+
 
 const addressCtrl = new AddressCtrl();
 
