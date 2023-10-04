@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { map } from "lodash";
-import { Order as OrderCtrl } from "@/app/api/page";
+import { Order as OrderCtrl } from "@/app/api";
 import { useAuth } from "@/hooks";
 import { Order } from "./Order/page";
 import { NoResult } from "@/components/Shared/page";

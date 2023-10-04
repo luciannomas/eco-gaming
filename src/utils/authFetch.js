@@ -46,8 +46,7 @@ export async function authFetch(url, params) {
                     Authorization: `Bearer ${token}`,
                 },
             };
-            console.log("paramsTemp:", paramsTemp)
-
+            
             try {
                 return await fetch(url, paramsTemp);
             } catch (error) {
