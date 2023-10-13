@@ -1,15 +1,16 @@
 import { Pagination as PaginationSU } from "semantic-ui-react";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 import styles from "./Pagination.module.scss";
 
 export function Pagination(props) {
-  const { currentPage, totalPages } = props;
+  const { currentPage, totalPages, slug } = props;
   const router = useRouter();
 
   const onPageChange = (_, data) => {
     const { activePage } = data;
-
-    router.replace({ query: { ...router.query, page: activePage } });
+    
+    router.push(slug+'?page='+ activePage);
+    //router.replace({ query: { ...router.query, page: activePage } }); // old version
   };
 
   return (
