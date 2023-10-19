@@ -9,7 +9,7 @@ export function Pagination(props) {
   const onPageChange = (_, data) => {
     const { activePage } = data;
     
-    router.push(slug+'?page='+ activePage);
+    router.replace(slug+'?page='+ activePage);
     //router.replace({ query: { ...router.query, page: activePage } }); // old version
   };
 
