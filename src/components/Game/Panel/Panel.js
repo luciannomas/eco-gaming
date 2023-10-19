@@ -1,25 +1,21 @@
 import { useState } from "react";
 import { Button, Container, Icon, Image } from "semantic-ui-react";
 import { fn } from "@/utils";
-import { useCart } from "@/hooks";
-import { WishlistIcon } from "@/components/Shared";
+// import { useCart } from "@/hooks";
+
 import styles from "./Panel.module.scss";
+import { WishlistIcon } from '../../Shared/WishlistIcon/WishlistIcon';
 
 export function Panel(props) {
   const { gameId, game } = props;
   const [loading, setLoading] = useState(false);
-  const { addCart } = useCart();
+  // const { addCart } = useCart();
 
   const platform = game.platform.data;
   const buyPrice = fn.calcDiscountedPrice(game.price, game.discount);
 
   const addCartWrapper = () => {
-    setLoading(true);
-    addCart(gameId);
-
-    setTimeout(() => {
-      setLoading(false);
-    }, 500);
+   alert("ok")
   };
 
   return (
@@ -34,7 +30,7 @@ export function Panel(props) {
 
           <div className={styles.moreInfo}>
             <span>
-              <Image src={platform.attributes.icon.data.attributes.url} />
+              <Image src={`http://localhost:1337${platform.attributes.icon.data.attributes.url}`} />
               {platform.attributes.title}
             </span>
             <span>
