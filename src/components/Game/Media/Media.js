@@ -1,7 +1,8 @@
 import { Container } from "semantic-ui-react";
-import { Video } from "./Video";
-import { Gallery } from "./Gallery";
-import { Separator } from "@/components/Shared";
+import { Video } from "./Video/page";
+import { Gallery } from "./Gallery/page";
+import { Separator } from '../../Shared/Separator/Separator';
+
 
 export function Media(props) {
   const { video, screenshots } = props;

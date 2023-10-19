@@ -31,10 +31,10 @@ export default function GamePage(props) {
 
         <Separator height={30} />
 
-        {/* <Game.Media
+        <Game.Media
           video={game.attributes.video}
           screenshots={game.attributes.screenshots.data}
-        /> */}
+        />
 
         <Separator height={50} />
       </BasicLayout>

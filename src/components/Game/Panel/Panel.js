@@ -21,7 +21,7 @@ export function Panel(props) {
   return (
     <Container className={styles.panel}>
       <div className={styles.imgContiner}>
-        <Image src={game.cover.data.attributes.url} />
+        <Image src={`http://localhost:1337${game.cover.data.attributes.url}`} />
       </div>
 
       <div className={styles.actionsContainer}>

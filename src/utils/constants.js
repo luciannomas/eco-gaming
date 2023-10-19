@@ -9,7 +9,7 @@ export const ENV = {
     USERS_ME: "users/me",
     USERS: "users",
     PLATFORM: "platforms",
-    ADDRESS: "adresses", // corregir coleccion de la base
+    ADDRESS: "adresses", // corregir coleccion de la base y wallpaper
     GAME: "games",
     WISHLIST: "wishlists",
     PAYMENY_ORDER: "payment-order",

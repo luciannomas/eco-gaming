@@ -2,12 +2,15 @@ import { useState } from "react";
 import { Image } from "semantic-ui-react";
 import { map } from "lodash";
 import Slider from "react-slick";
-import { FullModal } from "@/components/Shared";
+
 import styles from "./Gallery.module.scss";
+import { FullModal } from '../../../Shared/FullModal/FullModal';
+
 
 export function Gallery(props) {
   const { screenshots } = props;
   const [show, setShow] = useState(false);
+  console.log("screenshots",screenshots)
 
   const onOpenClose = () => setShow((prevState) => !prevState);
 
@@ -22,7 +25,7 @@ export function Gallery(props) {
     slidesToScroll: 1,
     arrows: false,
     customPaging: function (index) {
-      return <Image src={screenshots[index].attributes.url} />;
+      return <Image src={`http://localhost:1337${screenshots[index].attributes.url}`} />;
     },
   };
 
@@ -30,13 +33,13 @@ export function Gallery(props) {
     <>
       <div className={styles.gallery}>
         <div className={styles.principal}>
-          <Image src={principalImage.attributes.url} onClick={onOpenClose} />
+          <Image src={`http://localhost:1337${principalImage.attributes.url}`} onClick={onOpenClose} />
         </div>
 
         <div className={styles.grid}>
           {map(screenshotsClone, (screenshot) => (
             <div key={screenshot.id}>
-              <Image src={screenshot.attributes.url} onClick={onOpenClose} />
+              <Image src={`http://localhost:1337${screenshot.attributes.url}`} onClick={onOpenClose} />
             </div>
           ))}
         </div>
@@ -47,7 +50,7 @@ export function Gallery(props) {
           <Slider {...settings}>
             {map(screenshots, (screenshot) => (
               <div key={screenshot.id}>
-                <Image src={screenshot.attributes.url} />
+                <Image src={`http://localhost:1337${screenshot.attributes.url}`} />
               </div>
             ))}
           </Slider>
