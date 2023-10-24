@@ -11,7 +11,7 @@ export const ENV = {
     PLATFORM: "platforms",
     ADDRESS: "adresses", // corregir coleccion de la base y wallpaper
     GAME: "games",
-    WISHLIST: "wishlists",
+    WISHLIST: "whishlists", // corregir a wishlists
     PAYMENY_ORDER: "payment-order",
     ORDER: "orders",
   },

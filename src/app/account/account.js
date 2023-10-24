@@ -8,6 +8,7 @@ import { Tab } from "semantic-ui-react"; import {
 import { Separator } from "@/components/Shared/page";
 import { useAuth } from "@/hooks";
 import { useRouter } from "next/navigation";
+import { Wishlist } from "@/components/Account/Wishlist/Wishlist";
 
 
 export default function AccountPage() {
@@ -35,7 +36,8 @@ export default function AccountPage() {
       menuItem: "Lista de deseos",
       render: () => ( 
         <Tab.Pane attached={false}>
-          <p>Lista de deseos</p>
+          <Wishlist />
+          <Separator height={80} />
         </Tab.Pane>
       ),
     },

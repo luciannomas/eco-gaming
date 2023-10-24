@@ -17,7 +17,7 @@ export function GridGames(props) {
           <div key={item.id} className={styles.game}>
             <Link href={`/${game.attributes.slug}`}>
               <div>
-                <img src={cover.attributes.url} />
+                <img src={`http://localhost:1337${cover.attributes.url}`} />
 
                 {game.attributes.discount > 0 && (
                   <Label.Discount className={styles.discount}>
