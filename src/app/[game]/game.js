@@ -6,10 +6,9 @@ export async function getGamePage(context) {
   const {
     params: { game },
   } = context;
-
+  
   const gameCtrl = new Game();
   const response = await gameCtrl.getBySlug(game);
-  //console.log("response", response)
 
   return {
     game: response

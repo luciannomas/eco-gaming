@@ -10,8 +10,7 @@ import { FullModal } from '../../../Shared/FullModal/FullModal';
 export function Gallery(props) {
   const { screenshots } = props;
   const [show, setShow] = useState(false);
-  console.log("screenshots",screenshots)
-
+  
   const onOpenClose = () => setShow((prevState) => !prevState);
 
   const screenshotsClone = [...screenshots];

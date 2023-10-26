@@ -2,7 +2,7 @@ import 'semantic-ui-css/semantic.min.css'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "@/scss/global.scss"
-import { AuthProvider } from '../contexts/index'
+import { AuthProvider, CartProvider } from '../contexts/index'
 import { Inter } from 'next/font/google'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -17,7 +17,9 @@ export default function RootLayout({ children }) {
     <html lang="es">
       <body className={inter.className}>
         <AuthProvider>
-          {children}
+          <CartProvider>
+            {children}
+          </CartProvider>
         </AuthProvider>
       </body>
     </html>

@@ -3,7 +3,7 @@ import { useState } from "react";
 import styles from "./account.module.scss";
 import { BasicLayout } from "@/layouts/BasicLayout/BasicLayout";
 import { Tab } from "semantic-ui-react"; import {
-  Info, Settings, Address
+  Info, Settings, Address,  Orders,
 } from "@/components/Account/page";
 import { Separator } from "@/components/Shared/page";
 import { useAuth } from "@/hooks";
@@ -29,6 +29,7 @@ export default function AccountPage() {
       render: () => (
         <Tab.Pane attached={false}>
           <p>mis pedidos</p>
+          {/* <Orders /> */}
         </Tab.Pane>
       ),
     },

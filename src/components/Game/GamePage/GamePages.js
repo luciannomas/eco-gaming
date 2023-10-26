@@ -9,11 +9,8 @@ import { Game } from '../page';
 export default function GamePage(props) {
   
   const { data: game } = props;
-  console.log("props", game)  
   const wallpaper = game.attributes.walpaper;
-  console.log("wallpaper", wallpaper.data.attributes.url)
-
-
+  
   return (
     <>
       <Seo
