@@ -1,3 +1,4 @@
+'use client'
 import { Container } from "semantic-ui-react";
 import { Separator } from "@/components/Shared/page";
 import { Footer, HeaderCart} from '@/components/Layout/page';

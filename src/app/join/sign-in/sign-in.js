@@ -2,7 +2,8 @@ import { LoginForm } from "@/components/Auth/LoginForm";
 import Link from "next/link";
 import { JoinLayout } from "../../../layouts/JoinLayout/page";
 import styles from "./sign-in.module.scss";
-import { Seo } from '@/components/Shared/page';
+import { Seo } from '../../../components/Shared/Seo/Seo';
+
 
 export default function SignInPage() {
   return (
