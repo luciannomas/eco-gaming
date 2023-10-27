@@ -1,3 +1,4 @@
+'use client'
 import { useState, useEffect } from "react";
 import { Icon } from "semantic-ui-react";
 import classNames from "classnames";
