@@ -5,7 +5,7 @@ import { BasicLayout } from "@/layouts/BasicLayout/BasicLayout";
 import { Tab } from "semantic-ui-react"; import {
   Info, Settings, Address,  Orders,
 } from "@/components/Account/page";
-import { Separator } from "@/components/Shared/page";
+import { Seo, Separator } from "@/components/Shared/page";
 import { useAuth } from "@/hooks";
 import { useRouter } from "next/navigation";
 import { Wishlist } from "@/components/Account/Wishlist/Wishlist";
@@ -28,8 +28,7 @@ export default function AccountPage() {
       menuItem: "Mis pedidos",
       render: () => (
         <Tab.Pane attached={false}>
-          <p>mis pedidos</p>
-          {/* <Orders /> */}
+          <Orders />
         </Tab.Pane>
       ),
     },
@@ -77,6 +76,7 @@ export default function AccountPage() {
 
   return (
     <>
+    <Seo title="Mi cuenta"/>
       <BasicLayout isContainer relative>
         <Info />
 

@@ -2,12 +2,12 @@ import { LoginForm } from "@/components/Auth/LoginForm";
 import Link from "next/link";
 import { JoinLayout } from "../../../layouts/JoinLayout/page";
 import styles from "./sign-in.module.scss";
+import { Seo } from '@/components/Shared/page';
 
 export default function SignInPage() {
   return (
     <>
-
-
+      <Seo title="Iniciar sesión" />
       <JoinLayout>
         <div>
           <h3>Iniciar sesión</h3>

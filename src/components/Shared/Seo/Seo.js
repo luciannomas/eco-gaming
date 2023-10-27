@@ -5,6 +5,7 @@ export function Seo(props) {
     title = "Gaming - Tus juegos favoritos",
     description = "Tus juegos favoritos para Steam, PlayStation, Xbox, Switch al mejor precio.",
   } = props;
+  console.log("hols", props)
 
   return (
     <Head>
